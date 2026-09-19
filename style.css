@@ -556,8 +556,11 @@ color: inherit;
   text-align: center;
 }
 
+
 /* ---------- 7. About section ---------- */
-.about { padding: 4rem 1.25rem; }
+.about {
+  padding: 4rem 1.25rem;
+}
 
 .about-inner {
   max-width: var(--max-width);
@@ -570,13 +573,26 @@ color: inherit;
 
 .about-image-frame {
   position: relative;
-  aspect-ratio: 5 / 4;
+
+  /* Match the uploaded image's proportions */
+  aspect-ratio: 1080 / 1044;
+
+  width: 100%;
   border-radius: var(--radius-lg);
   overflow: hidden;
   background: var(--burgundy-mid);
   box-shadow: var(--shadow-soft);
 }
-.about-image-frame img { width: 100%; height: 100%; object-fit: cover; }
+
+.about-image-frame img {
+  width: 100%;
+  height: 100%;
+
+  /* Display the complete image without cropping */
+  object-fit: contain;
+
+  display: block;
+}
 
 .about-text p {
   font-size: 1.05rem;
@@ -584,7 +600,6 @@ color: inherit;
   opacity: 0.85;
   max-width: 58ch;
 }
-
 /* ---------- 8. How it works ---------- */
 .steps {
   background: var(--maroon-deep);
