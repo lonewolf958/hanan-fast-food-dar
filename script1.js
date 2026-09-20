@@ -335,7 +335,6 @@ const MENU_DATA = [
   {
     id: "hanan-platters",
     name: "Platters",
-    note: "Take away Extra Charges 3,000/=",
 
     items: [
       {
