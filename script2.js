@@ -335,36 +335,36 @@ const MENU_DATA = [
   {
     id: "hanan-platters",
     name: "Platters",
-    note: "Take away Extra Charges 3,000/=",
+    note: "Take away Extra Charges 3,000/= are inclusive this price",
 
     items: [
       {
         name: "Chicken Platter",
-        price: 35000,
+        price: 38000,
 		desc: "2 half chicken , 1 pc seek kabab , 4 pc ch/lollypop , 4 pc ch/wings , 1 znz pizza , 2 butternaan , 1 portion of rice and 1/2 portion curry & 3 types of chips.",
       },
 
       {
         name: "Beef Platter",
-        price: 40000,
+        price: 43000,
 		desc: "4 sticks mishkaki  , 4 sticks nundu , 1 pc seekkabab , 4 pc chops , 1 pc steak , 1 znz pizza , 2 butternaan , 1 portion of rice , 1/2 portion of curry & 3 types of chips.",
       },
 
       {
         name: "Mix Platter(Chicken & Beef)",
-        price: 45000,
+        price: 48000,
 		desc: "4 pc chops , 4 sticks mishkaki , 4 stick nundu , 1/2 sekela , 1 pc seekkabab , 4 pc ch/lollypop , 4 pc ch/wings , 1 znz pizza , 2 butternaan , 1 portion of rice , 1/2 portion of curry & 3 types of chips.",
       },
 
       {
         name: "Seafood PLatter (Small)",
-        price: 45000,
+        price: 48000,
 		desc: "Depends on availability.",
       },
 
        {
         name: "Seafood PLatter (Large)",
-        price: 90000,
+        price: 93000,
 		desc: "Depends on availability.",
       }
     ]
