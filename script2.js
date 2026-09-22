@@ -387,6 +387,18 @@ const MENU_DATA = [
       { name: "Kungu Juice", small: 3000, large: 5000 },
     ],
   },
+	 {
+    id: "mojito",
+    name: "Mojito",
+    items: [
+      { name: "Passion Mojito", price: 8000 },
+      { name: "Lemon Mojito", price: 8000 },
+      { name: "Pineapple Mojito", price: 8000 },
+      { name: "Blue Mojito", price: 8000 },
+	  { name: "Strawberry Mojito", price: 8000 },
+	  { name: "Vimto Mojito", price: 8000 },
+    ],
+  },
    {
     id: "drinks",
     name: "Drinks",
