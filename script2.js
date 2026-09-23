@@ -426,25 +426,13 @@ const CART_STORAGE_KEY = "bismillahHananCart";
    ========================================================================= */
 
 const DELIVERY_AREAS = [
-  { name: "Mkunazi", fee: 2000 },
-  { name: "Bahari", fee: 2000 },
-  { name: "Mwembe", fee: 2500 },
-  { name: "Bustani", fee: 3000 },
-  { name: "Mji Mpya", fee: 2500 },
-  { name: "Kivuli", fee: 3000 },
-  { name: "Jua Kali", fee: 3500 },
-  { name: "Amani", fee: 2000 },
-  { name: "Mtoni", fee: 3000 },
-  { name: "Mlimani", fee: 3500 },
-  { name: "Kijani", fee: 2500 },
-  { name: "Mwanga", fee: 2000 },
-  { name: "Bahari Mpya", fee: 3500 },
-  { name: "Mapera", fee: 2500 },
-  { name: "Raha", fee: 3000 },
-  { name: "Mbuyuni", fee: 4000 },
-  { name: "Umande", fee: 2000 },
-  { name: "Mji wa Kale", fee: 2500 },
-  { name: "Kaskazini", fee: 3500 },
+  { name: "Town", fee: 2000 },
+  { name: "Upanga", fee: 2000 },
+  { name: "Kariakoo", fee: 2000 },
+  { name: "Posta", fee: 2000 },
+  { name: "Seaview/Ocean Road", fee: 3000 },
+  { name: "Magomeni", fee: 5000 - 7000},
+  { name: "Ilala", fee: 7000 },
 ];
 
 /*
