@@ -1855,7 +1855,6 @@ function resetOrderForm() {
 /* =========================================================================
    WHATSAPP ORDER
    ========================================================================= */
-
 function sendOrderToWhatsApp() {
   if (!isOrderFormValid()) {
     return;
@@ -1936,6 +1935,8 @@ function sendOrderToWhatsApp() {
 
   lines.push("");
 
+  /* ---------- Ordered Items ---------- */
+
   cart.forEach((item) => {
     lines.push(
       item.qty +
@@ -1950,52 +1951,7 @@ function sendOrderToWhatsApp() {
 
   lines.push("");
 
-  lines.push(
-    "Food Total: " +
-      formatPrice(foodTotal)
-  );
-
-  if (orderType === "delivery") {
-    if (
-      selectedArea ===
-      OTHER_AREA_VALUE
-    ) {
-      lines.push(
-        "Delivery Fee: To be confirmed"
-      );
-    } else {
-      lines.push(
-        "Delivery Fee: " +
-          formatPrice(
-            finalDeliveryFee
-          )
-      );
-    }
-  } else {
-    lines.push(
-      "Delivery Fee: " +
-        formatPrice(0)
-    );
-  }
-
-  if (
-    orderType === "delivery" &&
-    selectedArea ===
-      OTHER_AREA_VALUE
-  ) {
-    lines.push(
-      "Total: " +
-        formatPrice(foodTotal) +
-        " + delivery fee to be confirmed"
-    );
-  } else {
-    lines.push(
-      "Total: " +
-        formatPrice(finalTotal)
-    );
-  }
-
-  lines.push("");
+  /* ---------- Customer / Order Details ---------- */
 
   lines.push(
     "Order type: " +
@@ -2013,6 +1969,8 @@ function sendOrderToWhatsApp() {
     "Contact: " +
       customerContact
   );
+
+  /* ---------- Delivery Details ---------- */
 
   if (orderType === "delivery") {
     if (
@@ -2047,6 +2005,42 @@ function sendOrderToWhatsApp() {
     );
   }
 
+  /* ---------- Totals ---------- */
+
+  lines.push("");
+
+  lines.push(
+    "Food Total: " +
+      formatPrice(foodTotal)
+  );
+
+  lines.push(
+    "Delivery Fee: " +
+      (
+        orderType === "delivery"
+          ? selectedArea === OTHER_AREA_VALUE
+            ? "To be confirmed"
+            : formatPrice(finalDeliveryFee)
+          : formatPrice(0)
+      )
+  );
+
+  if (
+    orderType === "delivery" &&
+    selectedArea === OTHER_AREA_VALUE
+  ) {
+    lines.push(
+      "Total: " +
+        formatPrice(foodTotal) +
+        " + delivery fee to be confirmed"
+    );
+  } else {
+    lines.push(
+      "Total: " +
+        formatPrice(finalTotal)
+    );
+  }
+
   lines.push("");
 
   lines.push(
@@ -2072,7 +2066,6 @@ function sendOrderToWhatsApp() {
   resetOrderForm();
   closeCart();
 }
-
 /* =========================================================================
    CART UI EVENTS
    ========================================================================= */
