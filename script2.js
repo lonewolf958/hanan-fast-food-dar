@@ -431,7 +431,7 @@ const DELIVERY_AREAS = [
   { name: "Kariakoo", fee: 2000 },
   { name: "Posta", fee: 2000 },
   { name: "Seaview/Ocean Road", fee: 3000 },
-  { name: "Magomeni", fee: 5000 - 7000},
+  { name: "Magomeni", fee: 5000/7000},
   { name: "Ilala", fee: 7000 },
 ];
 
